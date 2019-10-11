@@ -1,4 +1,26 @@
 // Variables
+.btn(@width, @height, @color, @font-size){
+
+    background-color: navy;
+    width:@width;
+    height: @height;
+    color:@color;
+    font-size:@font-size;
+    // padding: 15px;
+    // text-align: center;
+    // border-radius: 12px;
+    &:hover{
+        background-color: darken(skyblue,20%)
+    }
+    
+
+    @media @phone{
+        width: 100%;
+       flex-direction: column;
+       align-content: center;
+    
+    }
+}   
 
 // Color pointers
 @nav-bg: @wild-sand;
@@ -24,3 +46,4 @@
 @border-real: #dee2e6;
 
 // Mobile var
+@phone: ~"(max-width: 500px)";
